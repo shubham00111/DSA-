@@ -1,5 +1,5 @@
 
-public static int lcs(String str1, String str2) {
+public static int lcsubsequence(String str1, String str2) {
 		int n=str1.length(), m=str2.length();
         int dp[][]=new int[n+1][m+1];
         int ans=Integer.MIN_VALUE;
