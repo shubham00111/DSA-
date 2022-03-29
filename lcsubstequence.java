@@ -10,14 +10,9 @@ public static int lcsubsequence(String str1, String str2) {
                     
                 }
                 else{
-                    dp[i][j]=0;
+                    dp[i][j]=Math.max(dp[i-1][j],dp[i][j-1]);
                 }
             }
         }
-        for(int i=0;i<=n;i++){
-            for(int j=0;j<=m;j++){
-                ans=Math.max(ans,dp[i][j]);
-            }
-        }
-        return ans;
+	return dp[n][m];
 }
